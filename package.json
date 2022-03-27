@@ -1,0 +1,28 @@
+{
+  "name": "breaking-bad-app",
+  "version": "1.0.0",
+  "description": "Sample Breaking-Bad App application",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --hot"
+  },
+  "keywords": [],
+  "author": "Antonio Juan Sánchez",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hot-loader": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
