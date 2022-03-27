@@ -1,7 +1,6 @@
 
-const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -16,6 +15,7 @@ module.exports = {
     static: './dist',
     hot: true,
     client: false,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -37,4 +37,9 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-};
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  }
+}

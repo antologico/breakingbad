@@ -1,3 +1,3 @@
-import Main from './container/Main'
+import Router from './components/Router'
 import { hot } from 'react-hot-loader/root'
-export default hot(Main)
+export default hot(Router)

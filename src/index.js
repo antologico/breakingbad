@@ -1,7 +1,16 @@
-import App from './App'
+import '@babel/polyfill'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import App from './App'
+import initStore from './store'
+import { render } from 'react-dom';
+const store = initStore()
+import { Provider } from 'react-redux'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app'),
+)
 
-module.hot && module.hot.accept()
+module.hot && module.hot.accept(App)
