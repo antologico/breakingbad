@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` component renders properly 1`] = `
+Array [
+  <h1
+    className="sc-bczRLJ ibOPpr"
+  >
+    <img
+      alt="IMBd"
+      height="30px"
+      src="image"
+    />
+     Breaking Bad
+  </h1>,
+  <div>
+    <input
+      className="sc-kDDrLX bHKnbf"
+      onChange={[Function]}
+      placeholder="🔎 Buscar: Walter White"
+      value=""
+      width="100%"
+    />
+  </div>,
+  <div
+    className="sc-iqcoie gtVNTc"
+  >
+    <nav
+      data-test="character_1"
+    >
+      <a
+        id="link"
+      >
+        <span>
+          Alt
+        </span>
+        <img
+          alt="Alt"
+          className="sc-eCYdqJ dJkwBv"
+          data-test="image"
+          height="40px"
+          src="image1.png"
+          width="40px"
+        />
+      </a>
+    </nav>
+    <nav
+      data-test="character_2"
+    >
+      <a
+        id="link"
+      >
+        <span>
+          Control
+        </span>
+        <img
+          alt="Control"
+          className="sc-eCYdqJ dJkwBv"
+          data-test="image"
+          height="40px"
+          src="image1.png"
+          width="40px"
+        />
+      </a>
+    </nav>
+  </div>,
+]
+`;

@@ -5,27 +5,47 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot",
+    "jest-test": "jest ./src",
+    "jest-coverage": "jest ./src --coverage",
+    "test-cypress": "cypress open-ct"
   },
   "keywords": [],
   "author": "Antonio Juan Sánchez",
   "dependencies": {
     "@babel/core": "^7.13.16",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
+    "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.2",
-    "html-webpack-plugin": "^5.5.0",
+    "cypress": "^9.5.4",
+    "enzyme": "^3.11.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "4",
     "jest": "^27.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",
+    "react-intl": "^5.24.8",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
+    "react-test-renderer": "^17.0.2",
     "redux": "^4.1.2",
     "redux-saga": "^1.1.3",
+    "source-map-loader": "^3.0.1",
+    "styled-components": "^5.3.5",
     "webpack": "^5.35.1",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^4.7.4"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "@cypress/react": "^5.12.4",
+    "@cypress/webpack-dev-server": "^1.8.4"
   }
 }

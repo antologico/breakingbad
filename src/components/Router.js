@@ -1,15 +1,16 @@
+/* istanbul ignore file */
 import React from 'react'
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom'
-import List from './List'
+import Index from './Index'
 import Detail from './Detail'
 
 const Router = () => <BrowserRouter>
     <Routes>
-      <Route path='/'  element={<List />} />
+      <Route path='/'  element={<Index />} />
       <Route path='detail'>
           <Route path=':id' element={<Detail />} />
       </Route>

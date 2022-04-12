@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import {
     call,
     takeEvery,
@@ -14,25 +15,16 @@ import {
 import {
     updateCharacter,
     updateCharacteres,
-    setError,
 } from '../actions/character'
 
 function* fetchCharacter(action) {
-    try {
-       const character = yield call(Api.fetchCharacter, action.id)
-       yield put(updateCharacter(character))
-    } catch (e) {
-        yield put(setError(e.message))
-    }
+    const character = yield call(Api.fetchCharacter, action.id)
+    yield put(updateCharacter(character))
 }
 
 function* fetchCharacteres() {
-    try {
-       const characteres = yield call(Api.fetchCharacteres)
-       yield put(updateCharacteres(characteres))
-    } catch (e) {
-        yield put(setError(e.message))
-    }
+    const characteres = yield call(Api.fetchCharacteres)
+    yield put(updateCharacteres(characteres))
 }
 
 function* fetchCharacteresSaga() {

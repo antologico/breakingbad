@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error component renders properly 1`] = `
+<div
+  className="sc-jSMfEi cbmkWi"
+>
+  <div>
+    Se ha producido un error cargando los datos
+  </div>
+  <a
+    id="link"
+  >
+    <span>
+      Volver
+    </span>
+    <span>
+      ↩
+    </span>
+  </a>
+</div>
+`;

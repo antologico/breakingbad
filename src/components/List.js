@@ -1,34 +1,48 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import {fetchCharacteres } from '../actions/character'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { Title, Input, Characteres, CharacterImage } from '../ui'
+import { injectIntl } from 'react-intl'
+import imdb from '../images/imdb.svg'
 
-const List = () => {
-  const state = useSelector(state => state)
-  const loading = useSelector(state => state.character.loading)
-  const error = useSelector(state => state.character.error)
-  const characteres = useSelector(state => state.character.data)
-  const dispatch = useDispatch()
+const List = ({ characteres, intl }) => {
+  const [filter, setFilter] = useState('')
+  const filtered = filter !== ''
+    ? characteres.filter(({ data }) => data.name.includes(filter))
+    : characteres
 
-  useEffect(() => {
-    (characteres.length === 0) && !error && dispatch(fetchCharacteres())
-  }, [ fetchCharacteres, characteres, error ])
-  
-  if (loading) {
-    return <div>
-      Loading...
-    </div>
-  }
-
-  return <div>
-    <div>Braking Bad</div>
+  return <>
+    <Title><img src={imdb} alt='IMBd' height='30px' /> Breaking Bad</Title>
     <div>
-    {characteres && characteres.map(({ data }) => {
-      const key=`character_${data.id}`
-      return <nav><Link to={`/detail/${data.id}`} dataTest={key} key={key} >
-            {data.name}
-      </Link></nav>
-  })}</div></div>
+        <Input
+          placeholder={'🔎 ' + intl.formatMessage({
+            id: 'example',
+            defaultMessage: 'Ex, Walter',
+          },)}
+          width='100%'
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)} />
+    </div>
+    <Characteres>
+      {filtered && filtered.map(({ data }) => {
+        const key=`character_${data.id}`
+        const { name, image } = data
+        return <nav key={key} data-test={key}>
+            <Link to={`/detail/${data.id}`} >
+                <span>{name}</span>
+                <CharacterImage data-test='image' src={image} alt={name} height='40px' width='40px'/>
+            </Link>
+        </nav>
+    })}</Characteres>
+  </>
 }
 
-export default List
+List.propTypes = {
+  intl: PropTypes.object,
+  characteres: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+  }))
+}
+
+export default injectIntl(List)

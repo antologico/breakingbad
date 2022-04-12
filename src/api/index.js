@@ -1,18 +1,27 @@
+/* istanbul ignore file */
+import resolve from './resolve'
+
 export async function fetchCharacteres () {
-    const items = await fetch("https://breakingbadapi.com/api/characters")
-    const data = await items.json()
-    console.log(data)
-    return data.map(item => ({
+    const data = await resolve(`https://breakingbadapi.com/api/characters`)
+    return data ? data.map(item => ({
         id: item.char_id,
         name: item.name,
-    }))
+        image: item.img,
+    })).sort((itemA, itemB) => itemA.name > itemB.name ? 1 : -1) : null
 }
 
 export async function fetchCharacter (id) {
-    const items = await fetch(`https://breakingbadapi.com//api/characters/${id}`)
-    const data = await items.json()
-    return {
-        id,
-        ...data,
-    }
+    const data = await resolve(`https://breakingbadapi.com/api/characters/${id}`)
+    const item = data && data[0]
+    return item ? {
+        id: parseInt(id),
+        name: item.name,
+        image: item.img,
+        nickname: item.nickname,
+        appearance: item.appearance,
+        occupation: item.occupation,
+        birthday: item.birthday,
+        status: item.status,
+        portrayed: item.portrayed,
+    } : null
 }

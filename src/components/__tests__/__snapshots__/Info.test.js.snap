@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` component renders properly 1`] = `
+<article
+  className="sc-iBkjds bINJJu"
+>
+  <h1
+    className="sc-bczRLJ ibOPpr"
+    data-test="name"
+  >
+    Walt
+     
+    <br />
+     
+    <sup>
+      <i>
+        "
+        Nickname
+        "
+      </i>
+    </sup>
+  </h1>
+  <img
+    alt="Walt"
+    className="sc-eCYdqJ dJkwBv"
+    data-test="image"
+    height="300px"
+    src="image.png"
+    width="100%"
+  />
+  <section
+    className="sc-hKMtZM gZOnDg"
+  >
+    Fecha de nacimiento
+    : 
+    <strong>
+      domingo, 2 de febrero de 2020
+    </strong>
+  </section>
+  <section
+    className="sc-hKMtZM gZOnDg"
+  >
+    Estado
+    : 
+    <strong>
+      single
+    </strong>
+  </section>
+  <section
+    className="sc-hKMtZM gZOnDg"
+  >
+    Actor/Actriz
+    : 
+    <strong>
+      Actor Name
+    </strong>
+  </section>
+  <section
+    className="sc-hKMtZM gZOnDg"
+    data-test="occupation"
+  >
+    Ocupación
+    :
+    <ul
+      className="sc-ftvSup kDPIQF"
+    >
+      <li>
+        Bank
+      </li>
+    </ul>
+  </section>
+  <section
+    className="sc-hKMtZM gZOnDg"
+    data-test="seassons"
+  >
+    Temporadas
+    :
+    <ul
+      className="sc-ftvSup kDPIQF"
+    >
+      <li>
+        1
+      </li>
+      <li>
+        2
+      </li>
+    </ul>
+  </section>
+  <a
+    id="link"
+  >
+    <span>
+      Volver
+    </span>
+    <span>
+      ↩
+    </span>
+  </a>
+</article>
+`;
