@@ -34,3 +34,5 @@ Launches the unit test runner with file coverage info.
 
 ### yarn test:cypress
 Launches the end-to-end test runner.
+
+Avaible at Netlify: https://guileless-dodol-99fac4.netlify.app/
