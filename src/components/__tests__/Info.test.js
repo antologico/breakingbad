@@ -15,7 +15,22 @@ describe(' component', () => {
           nickname='Nickname'
           appearance={['1', '2']}
           occupation={['Bank']}
-          birthday={['2020-02-02']}
+          birthday='2020-02-02'
+          status='single'
+          portrayed='Actor Name'
+        />
+    )
+    expect(component.toJSON()).toMatchSnapshot()
+  })
+  test('renders properly without date', () => {
+    const component = create(
+        <Info 
+          name='Walt'
+          image='image.png'
+          nickname='Nickname'
+          appearance={['1', '2']}
+          occupation={['Bank']}
+          birthday='Unknown'
           status='single'
           portrayed='Actor Name'
         />

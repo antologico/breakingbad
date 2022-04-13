@@ -36,7 +36,7 @@ Detail.propTypes = {
   getCharacter: PropTypes.func.isRequired,
 }
 
-Detail.defaultProp = {
+Detail.defaultProps = {
   fetchCharacter,
   useDispatch,
   getError,

@@ -15,6 +15,7 @@ Array [
   <div>
     <input
       className="sc-kDDrLX bHKnbf"
+      data-test="search-box"
       onChange={[Function]}
       placeholder="🔎 Buscar: Walter White"
       value=""
@@ -26,6 +27,7 @@ Array [
   >
     <nav
       data-test="character_1"
+      data-test-group="character-item"
     >
       <a
         id="link"
@@ -36,7 +38,6 @@ Array [
         <img
           alt="Alt"
           className="sc-eCYdqJ dJkwBv"
-          data-test="image"
           height="40px"
           src="image1.png"
           width="40px"
@@ -45,6 +46,7 @@ Array [
     </nav>
     <nav
       data-test="character_2"
+      data-test-group="character-item"
     >
       <a
         id="link"
@@ -55,7 +57,6 @@ Array [
         <img
           alt="Control"
           className="sc-eCYdqJ dJkwBv"
-          data-test="image"
           height="40px"
           src="image1.png"
           width="40px"

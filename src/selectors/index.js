@@ -24,4 +24,5 @@ export {
     getCharacteres,
     getError,
     getLoading,
+    getLanguage,
 }

@@ -42,7 +42,7 @@ Index.propTypes = {
   getCharacteres: PropTypes.func.isRequired,
 }
 
-Index.defaultProp = {
+Index.defaultProps = {
   fetchCharacteres,
   useDispatch,
   getError,
